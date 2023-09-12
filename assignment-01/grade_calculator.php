@@ -53,13 +53,13 @@ button,input[type="submit"] {
     <h2>Temperature Converter</h2>
     <form method="post" action="">
         <label for="scores">Test scores 01:</label>
-        <input type="text" name="scores1" id="temperature" required>
+        <input type="text" name="scores1" required>
         <br><br>
         <label for="temperature">Test scores 02:</label>
-        <input type="text" name="scores2" id="temperature" required>
+        <input type="text" name="scores2" required>
         <br><br>
         <label for="temperature">Test scores 03:</label>
-        <input type="text" name="scores3" id="temperature" required>
+        <input type="text" name="scores3" required>
         <br><br>
         
         <input type="submit" value="Submit">

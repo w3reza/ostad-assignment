@@ -53,7 +53,7 @@ button,input[type="submit"] {
     <h2>Even or Odd Checker</h2>
     <form method="post" action="">
         <label for="number">Enter Number:</label>
-        <input type="number" name="number" id="temperature" required>
+        <input type="number" name="number" required>
         <br><br>
                
         <input type="submit" value="Submit">

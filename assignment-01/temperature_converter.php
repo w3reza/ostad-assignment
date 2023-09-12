@@ -18,7 +18,7 @@ body{
 }
 
 input[type="number"],input[type="text"], select {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;

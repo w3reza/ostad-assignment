@@ -53,7 +53,7 @@ button,input[type="submit"] {
     <h2>Weather Report</h2>
     <form method="post" action="">
         <label for="number">Enter Temperature:</label>
-        <input type="number" name="temperature" id="temperature" required>
+        <input type="number" name="temperature" required>
         <br><br>
                
         <input type="submit" value="Submit">

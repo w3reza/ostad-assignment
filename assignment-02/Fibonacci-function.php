@@ -11,9 +11,6 @@ function fibonacci($count){
     $FirstNumber=0;
     $SecondNumber = 1;
 
-
-
-
 for ($i = 0; $i < $count; $i++) {
 
     if ($i == 0) {
@@ -29,7 +26,6 @@ for ($i = 0; $i < $count; $i++) {
         $SecondNumber = $ThirdNumber;
 
     }
-
 
 }
 }

@@ -20,8 +20,6 @@ function EvenFor($start, $end, $step)
 
         }
     }
-
-
 }
 echo "Result using for Loop" . PHP_EOL;
 EvenFor(1, 20, 2);

@@ -5,6 +5,31 @@
 
 $FirstNumber = 0;
 $SecondNumber = 1;
+
+for ($i = 0; $i < 100; $i++) {
+
+    if ($i == 0) {
+        echo $FirstNumber . PHP_EOL;
+    } elseif ($i == 1) {
+        
+        echo $SecondNumber . PHP_EOL;
+    } else {
+        $ThirdNumber = $FirstNumber + $SecondNumber;
+
+        if ($ThirdNumber > 100) {
+            break;
+        }
+        echo $ThirdNumber . PHP_EOL;
+        $FirstNumber = $SecondNumber;
+        $SecondNumber = $ThirdNumber;
+
+    }
+
+}
+// Below Code was Before WahtsApp Post
+/*
+$FirstNumber = 0;
+$SecondNumber = 1;
 $count = 0;
 
 for ($i = 0; $count < 10; $i++) {
@@ -29,6 +54,7 @@ for ($i = 0; $count < 10; $i++) {
     $count++;
 
 }
+*/
 
 
 ?>

@@ -6,7 +6,7 @@
 
 $studentGrade = [
 
-    'Student_01'=>['Math' => 85, 'English' => 90, 'Science' => 78],
+    'Student_01'=>['Math' => 40, 'English' => 60, 'Science' => 50],
     'Student_02'=>['Math' => 70, 'English' => 65, 'Science' => 78],
     'Student_03'=>['Math' => 85, 'English' => 90, 'Science' => 78]
     
@@ -14,12 +14,28 @@ $studentGrade = [
 
 function MultidimensionalArray($studentGrade ){
 
-foreach ($studentGrade as $grades) {
+foreach ($studentGrade as $tudentIndex => $grades) {
 
     //print_r($grades);
     $avarage =  array_sum($grades);
     $result = $avarage / count($grades);
-    echo "The average grade for each student ". number_format($result , 2) ;
+    $result=number_format($result , 2);
+    if ($result<=39){
+        echo "{$tudentIndex} your avarage marks is {$result} and Grade is F";
+
+    }
+    else if($result<=59){
+        echo "{$tudentIndex} your avarage marks is {$result} and Grade is B";
+
+    }
+    else if($result<=79){
+        echo "{$tudentIndex} your avarage marks is {$result} and Grade is A";
+
+    }
+    else {
+        echo "{$tudentIndex} your avarage marks is {$result} and Grade is A+";
+    }
+    
     echo PHP_EOL;
    
  }

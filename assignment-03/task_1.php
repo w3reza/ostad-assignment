@@ -11,8 +11,8 @@ $text = "The quick brown fox jumps over the lazy dog.";
 function StringManipulation($textValue){
    
     $textReplaced =  str_replace("brown","red", $textValue);
-    $textValues =  strtolower($textReplaced);
-    echo $textValues;
+    $textResult =  strtolower($textReplaced);
+    echo $textResult;
 
 }
 

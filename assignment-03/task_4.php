@@ -6,9 +6,9 @@
 
 $studentGrade = [
 
-    ['Math' => 85, 'English' => 90, 'Science' => 78],
-    ['Math' => 70, 'English' => 65, 'Science' => 78],
-    ['Math' => 85, 'English' => 90, 'Science' => 78]
+    'Student_01'=>['Math' => 85, 'English' => 90, 'Science' => 78],
+    'Student_02'=>['Math' => 70, 'English' => 65, 'Science' => 78],
+    'Student_03'=>['Math' => 85, 'English' => 90, 'Science' => 78]
     
 ];
 

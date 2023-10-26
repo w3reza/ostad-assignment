@@ -1,0 +1,3 @@
+1, reza@gmail.com, reza, 12345, admin
+2, user@gmail.com, user, 12345, user
+3, test@com, test, 12345, manager

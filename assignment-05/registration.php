@@ -6,6 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $role = $_POST['role'];
 
+    if ( empty( $emailAddress ) || empty( $userName ) || empty( $password ) ) {
+      $errorMsg = "Please fill  all the fields.";
+  } else{
+
 
     $file = 'newfile.txt';
 
@@ -37,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<script type='text/javascript'>alert('User created successfully');</script>";
     header("Location: login.php");  
 }
+}
 
 ?>
 
@@ -59,6 +64,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+            <?php
+
+              if ( isset( $errorMsg ) ) {
+                  echo "<p>$errorMsg</p>";
+              }
+
+              ?>
             <form action="registration.php" method="POST">
 
               <div class="row">
@@ -66,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                   <div class="form-outline">
                     <label class="form-label" for="emailAddress">Email</label>
-                    <input required type="email" name="emailAddress" id="emailAddress" class="form-control form-control-lg" />
+                    <input type="email" name="emailAddress" id="emailAddress" class="form-control form-control-lg" />
                     
                   </div>
 

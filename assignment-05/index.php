@@ -8,6 +8,9 @@ if (!isset($_SESSION["emailAddress"])) {
 if ($_SESSION["role"] == "user") {
     header("Location: home_user.php");
 }
+elseif ($_SESSION["role"] == "manager") {
+    header("Location: home_manager.php");
+}
 elseif ($_SESSION["role"] == "admin") {
     header("Location: roleManagement.php");
 }

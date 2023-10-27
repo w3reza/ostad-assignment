@@ -12,6 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $role = $_POST['role'];
 
+    if ( empty( $emailAddress ) || empty( $userName ) || empty( $password ) ) {
+      $errorMsg = "Please fill  all the fields.";
+  } else{
+
     
     $file = 'newfile.txt';
 
@@ -29,16 +33,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Increment the ID for the new line
   $newID = $lineCount + 1;
 
-  // Open the file in append mode
-  //$fileHandle = fopen($file, 'a');
+ 
 
     $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
-    $txt = "{$newID}, ${emailAddress}, {$userName}, ${password}, ${role} \n";
+    $txt = "{$newID}, ${emailAddress}, {$userName}, {$password}, ${role} \n";
     fwrite($myfile, $txt);
     fclose($myfile);
 
     echo "<script type='text/javascript'>alert('User created successfully');</script>";
     header("Location: login.php");  
+}
 }
 
 ?>

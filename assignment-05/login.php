@@ -57,6 +57,15 @@ elseif (isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
 
           header("Location: index.php");
         }
+
+        else if ($emailAddresschk == $emailAddress[$i] && $passwordchk == $password[$i] && $role[$i] == "manager") {
+          $_SESSION["role"] = $role[$i];
+          $_SESSION["emailAddress"] = $emailAddress[$i];
+          $_SESSION["userName"] = $userName[$i];
+
+          header("Location: index.php");
+        }
+
         else {
           $errorMessage = "Wrong email or password";
         }

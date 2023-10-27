@@ -20,9 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $Newid = $_POST['id']; // New role name
   $Newemail = $_POST['emailAddress']; // New role name
   $Newuser = $_POST['userName']; // New role name
-  $Newuser = $_POST['userName']; // New role name
   $Newpassword = $_POST['password'];
   $Newrole = $_POST['role']; // New role name
+
+  if ( empty( $Newemail ) || empty( $Newuser ) || empty( $Newpassword ) ) {
+    $errorMsg = "Please fill  all the fields.";
+} else{
 
   $new_content_for_line = $Newid . ", {$Newemail}, {$Newuser}, {$Newpassword}, {$Newrole}"; // New content for the specific line
 
@@ -52,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "<script type='text/javascript'>alert('User created successfully');</script>";
     header("Location: login.php");  
+}
 }
 
 ?>

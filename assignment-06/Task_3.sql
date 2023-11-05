@@ -1,4 +1,3 @@
--- Active: 1698985470847@@127.0.0.1@3306@assignment_6
 SELECT 
     c.name AS CategoryName,
     SUM(ip.quantity * p.price) AS TotalRevenue

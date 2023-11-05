@@ -1,5 +1,3 @@
-Write a SQL query to retrieve the product name, quantity, and total amount for each order item. Display the result in ascending order of the order ID.
-
 SELECT 
     O.id AS OrderID, 
     P.name AS ProductName, 
